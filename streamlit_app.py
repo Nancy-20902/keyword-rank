@@ -97,7 +97,8 @@ with st.sidebar:
         "Lucknow": (26.8467, 80.9462),
         "Mumbai": (19.0760, 72.8777),
         "Noida": (28.5355, 77.3910),
-        "Pune": (18.5204, 73.8567)
+        "Pune": (18.5204, 73.8567),
+        "Faridabad": (28.4089, 77.3178)
     }
     
     city = st.selectbox("🏙️ Select City", sorted(list(cities_dict.keys())))
