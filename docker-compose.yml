@@ -1,0 +1,15 @@
+services:
+  backend:
+    image: keyword-rank-backend:312cfac
+    restart: unless-stopped
+  frontend:
+    image: keyword-rank-frontend:312cfac
+    restart: unless-stopped
+    ports:
+      - "54235:8501"
+    environment:
+      - BACKEND_URL=http://backend:8000
+      - API_URL=http://backend:8000
+    depends_on:
+      backend:
+        condition: service_healthy
